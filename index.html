@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="Rahulportfolio.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Carlito&family=Readex+Pro:wght@300&family=Roboto+Condensed:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,400;0,500;1,400&display=swap"
+        rel="stylesheet">
+    <!-- <link rel="icon" type="image/x-icon" href="/Portfolio/Portfoliologo.png"> -->
+
+
+    <link rel="icon" type="image/x-icon" href="Portfoliologo.png">
+    <title>Portfolio</title>
+</head>
+
+<body>
+
+    <!--Navabar-->
+    <nav class="navbar navbar-expand-lg sticky-top navbar-light">
+        <div class="container navbar-bottomborder ">
+
+
+            <a class="navbar-brand" href="#">
+                <img src="Portfoliologo2.png" alt="Logo" width="239" height="103"
+                    class="d-inline-block align-text-center imgs">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 nav-pills">
+                    <li class="nav-item ">
+                        <a class="nav-link mx-3" aria-current="page" href="#home">
+                            <h4 class="fw-bold">Home</h4>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link mx-3" href="#Experience">
+                            <h4 class="fw-bold">Experience</h4>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-3" href="#education">
+                            <h4 class="fw-bold">Education</h4>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-3" href="#project">
+                            <h4 class="fw-bold">Projects</h4>
+                        </a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link mx-3" href="#contact">
+                            <h4 class="fw-bold">Contact</h4>
+                        </a>
+                    </li>
+
+
+
+                </ul>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item ">
+                        <img
+                            src="data:image/png;base64,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">
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link " href="#contact">
+                            <h5 class="fw-bold">ailirahul1438@gmail.com</h5>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+    </nav>
+
+    <div class="d-flex" id="home">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h1 class='text-dark fw-bold' style="font-size: 3.4em;">Hey There</h1>
+
+                    <h1 class="typewriter text-dark">I'm <span class="fw-bold rahul">Rahul Aili🙋🏽‍♂️</span></h1>
+                    <p class='para-larger-txt mt-3 text-dark'>As a passionate Software developer I would love to solve
+                        the real
+                        time
+                        problems and to make a positive impact by using technologies
+                    </p>
+                    <div class="container1 text-center">
+                        <h1 class="fw-bold text-dark">💻 My Tech Stack 💻</h1>
+                        <p class="text-dark">I possess a unique combination of technical, creative, and interpersonal
+                            skills that allow me to
+                            excel in my field and deliver high-quality work</p>
+
+
+                        <div class="row">
+
+                            <div class="col">
+                                <li class="list-inline-item m-3">
+                                    <div class="icons8-html-5"></div>
+                                </li>
+                            </div>
+
+                            <div class="col">
+                                <li class="list-inline-item m-3">
+                                    <div class="icons8-css3"></div>
+                                </li>
+                            </div>
+                            <div class="col">
+                                <li class="list-inline-item m-3">
+                                    <div class="icons8-bootstrap"></div>
+                                </li>
+                            </div>
+                            <div class="col">
+                                <li class="list-inline-item m-3">
+                                    <div class="icons8-java"></div>
+                                </li>
+                            </div>
+                            <div class="col">
+                                <li class="list-inline-item m-3">
+                                    <div class="icons8-python"></div>
+                                </li>
+                            </div>
+                            <div class="col">
+                                <li class="list-inline-item m-3">
+                                    <div class="icons8-tomcat"></div>
+                                </li>
+                            </div>
+                            <div class="col">
+                                <li class="list-inline-item m-3">
+                                    <div class="icons8-java-eclipse"></div>
+                                </li>
+                            </div>
+                            <div class="col">
+                                <li class="list-inline-item m-3">
+                                    <div class="icons8-figma"></div>
+                                </li>
+                            </div>
+                            <a href="Rahul Resume (2).pdf" class="btn btn-lg btn-outline-success mb-4 green-text" download="Rahul Resume (2)">Download Resume</a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <img src="Myimage1.png" alt="myimage" height="650px" width="560px"
+                        class="img-fluid mx-auto d-block">
+                </div>
+
+
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6 con"></div>
+                <div class="col-lg-4">
+                    <div class="container2">
+
+                        <ul class="text-center p-0">
+
+                            <li class="list-inline-item m-3">
+                                <a href="https://www.linkedin.com/in/rahul-aili-2067a8225">
+                                    <div class="icons8-linkedin"></div>
+                                </a>
+                            </li>
+                            <li class="list-inline-item m-3">
+                                <a href="https://www.instagram.com/rahul_aili/">
+                                    <div class="icons8-instagram"></div>
+                                </a>
+                            </li>
+                            <li class="list-inline-item m-3">
+                                <a href="https://github.com/rahulaili">
+                                    <div class="icons8-github"></div>
+                                </a>
+                            </li>
+
+                            <li class="list-inline-item m-3">
+                                <a href="mailto:ailirahul1438@gmail.com">
+                                    <div class="icons8-gmail"></div>
+                                </a>
+                            </li>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="d-flex bg-white" id="Experience">
+        <div class="container ">
+            <h3 class="text-center fw-bold my-4 text-dark" style="font-size: 2.6em;">📅 EXPERIENCE 📅</h3>
+            <div class="row">
+
+                <div class="col-lg-6 my-4">
+
+                    <h1>Apr-2023 to May-2023</h1>
+                </div>
+
+                <div class="col-lg-6 my-4">
+                    <ul>
+                        <li style="font-size: 3em;">
+                            <h3>Campus Ambassador Internship Programme
+                                Internship Studio</h3>
+                        </li>
+                    </ul>
+                    <div class="vl">
+
+                    </div>
+                </div>
+
+                <div class="col-lg-6 my-4">
+
+                    <h1>May-2023 to present</h1>
+                </div>
+
+                <div class="col-lg-6 my-4">
+                    <ul>
+                        <li style="font-size: 3em;">
+                            <h3>Java Development Intern
+                                Code Clause Software Development and IT services</h3>
+                        </li>
+                    </ul>
+                    <div class="vl">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="d-flex" id="education">
+        <div class="container">
+            <div class="text-center mt-5 mb-4">
+                <h1 class="text-center fw-bold text-dark">👨🏻‍🎓 EDUCATION 👨🏻‍🎓</h1>
+            </div>
+
+            <div class="row mx-2">
+                <div class="col">
+                    <div class="card card-co border-light " style="border-radius: 20px;">
+                        <div class="card-body">
+                            <h2 class="text-center">Bachelor of Computer Applications(BCA)</h2>
+
+                            <h3 class="text-center">KLE Society's BCA P C Jabin Science College,Hubli</h3>
+
+                            <h4 class="text-center">2021-24</h4>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col">
+                    <div class="card card-co border-light" style="border-radius: 20px;">
+                        <div class="card-body">
+                            <h2 class="text-center">Pre University College</h2>
+
+                            <h3 class="text-center">KLE Society's P C Jabin PU Science College,Hubli</h3>
+
+                            <h4 class="text-center">2019-21<br><br></h4>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card card-co border-light" style="border-radius: 20px;">
+                        <div class="card-body">
+                            <h2 class="text-center">School 1st-10th</h2>
+
+                            <h3 class="text-center">Lions Education Society Ganeshmal Dhanraj Shah English medium
+                                school,Gadag</h3>
+
+                            <h4 class="text-center">2018 passout</h4>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="d-flex" id="project">
+        <div class="container">
+            <div class="text-center mt-5 mb-4">
+                <h1 class="text-center fw-bold text-dark">👨🏽‍💻 PROJECTS 👨🏽‍💻</h1>
+            </div>
+
+            <div class="col ">
+                <div class="row">
+                    <div class="card" style="width: 100%; border-radius: 20px;">
+                        <div id="carouselExampleControls " class="carousel slide" data-bs-ride="carousel"
+                            style="margin-top: 10px;">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="loginproject.png" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="signup.png" class="d-block w-100" alt="...">
+                                </div>
+
+                            </div>
+                            <button class="carousel-control-prev" type="button"
+                                data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button"
+                                data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title green-text fw-bold">LogIn and SignUpPage</h5>
+                            <p class="card-text green-text">Simple Login and Signup page project developed by using
+                                HTML,CSS,BOOTSTRAP</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <h1 class="text-center text-dark">Main Concepts used</h1>
+                            <li class="list-group-item">HTML</li>
+                            <li class="list-group-item">CSS</li>
+                            <li class="list-group-item">Bootstrap</li>
+                        </ul>
+                        <div class="card-body">
+                            <a href="https://rahulaili.github.io/Loginpage/" class="card-link">View Here</a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row my-2">
+                    <div class="card" style="width: 100%;">
+                        <div id="carouselExampleControls " class="carousel slide" data-bs-ride="carousel"
+                            style="margin-top: 10px;">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="clothmain.png" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="clothmen.png" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="clothkids.png" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="clothprofile.png" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="clothadmin.png" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="clothforgot.png" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="clothotp.png" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="CLothlogin.png" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="clothsignup.png" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="clothsuccess.png" class="d-block w-100" alt="...">
+                                </div>
+
+                            </div>
+                            <button class="carousel-control-prev" type="button"
+                                data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button"
+                                data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold green-text">Cloth Store Web Application</h5>
+                            <p class="card-text green-text">A cloth store web application completely developed by using
+                                concepts of HTML,CSS,BootStrap,java,JSP,Servlets,JakartaEE</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <h1 class="text-center text-dark">Main Concepts used</h1>
+                            <li class="list-group-item">Core Java</li>
+                            <li class="list-group-item">JSP</li>
+                            <li class="list-group-item">Servlet</li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container2" style="margin-top: 50px;" id="contact">
+        <div class="d-flex">
+            <div class="container ">
+
+                <div class="text-center mt-5 mb-4">
+                    
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-6 my-4">
+                        
+                        <h1 class="text-dark fw-bold" style="font-size: 3.5em;">Lets make something amazing by together</h1>
+                        <br><br><br><br>
+                        <h2 class="text-dark fw-bold" style="font-size: 3.2em;"> Start by <span style="color: darkgreen;">Saying Hi! 👋</span> </h2>
+                    </div>
+
+                    <div class="col-lg-6 my-4">
+                        <h1 class=" fw-bold green-text">📲 CONTACT ME 📲</h1>
+                        <h2 class=" green-text mx-3">&nbspFeel free to connect with me</h2>
+
+                        <ul class="p-0">
+                            <li class="list-inline-item m-3">
+                                <a href="https://www.linkedin.com/in/rahul-aili-2067a8225">
+                                    <div class="icons8-linkedin"></div>
+                                </a>
+                            </li>
+                            <li class="list-inline-item m-3">
+                                <a href="https://www.instagram.com/rahul_aili/">
+                                    <div class="icons8-instagram"></div>
+                                </a>
+                            </li>
+                            <li class="list-inline-item m-3">
+                                <a href="https://github.com/rahulaili">
+                                    <div class="icons8-github"></div>
+                                </a>
+                            </li>
+
+                            <li class="list-inline-item m-3">
+                                <a href="mailto:ailirahul1438@gmail.com">
+                                    <div class="icons8-gmail"></div>
+                                </a>
+                            </li>
+                            </li>
+                        </ul>
+
+                        <ul>
+                            
+                            <a class="nav-link" aria-current="page" href="#home">
+                                <h4 class="fw-bold text-dark">Home</h4>
+                            </a>
+                            <a class="nav-link" aria-current="page" href="#education">
+                                <h5 class="fw-bold text-dark ">EDUCATION</h5>
+                            </a>
+                            <a class="nav-link" aria-current="page" href="#Experience">
+                                <h5 class="fw-bold text-dark ">EXPERIENCE</h5>
+                            </a>
+                            <a class="nav-link" aria-current="page" href="#project">
+                                <h5 class="fw-bold text-dark ">PROJECTS</h5>
+                            </a>
+                            <a href="Rahul Resume (2).pdf" class="btn btn-lg btn-outline-success mb-4 green-text" download="Rahul Resume (2)">Download Resume</a>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
